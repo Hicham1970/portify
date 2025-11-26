@@ -9,7 +9,7 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/16/solid';
 
 const navItems = [
     { name: "Projects", href: "/projects" },
-    { name: "Skills", href: "#skills" },
+    { name: "Skills", href: "/skills" },
     { name: "Experience", href: "#experience" },
     { name: "Contact", href: "#contact" },
 ];

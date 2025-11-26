@@ -19,8 +19,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr">
-      {/* Ajout de bg-gray-900 pour un fond unifié */}
       <body className={`${inter.className} bg-gray-900 text-content`}>
+        {/* Conteneur pour l'animation de fond globale */}
+        <div className="absolute inset-0 -z-10 h-full w-full bg-gray-900 bg-[linear-gradient(to_right,#8080806a_1px,transparent_1px),linear-gradient(to_bottom,#8080801a_1px,transparent_1px)] bg-[size:14px_24px]"></div>
+        
         <Navbar />
         {children}
           <Footer />
