@@ -1,20 +1,14 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import { Inter } from "next/font/google";
+import Navbar from "@/components/navbar"; // Importez votre Navbar
+import "@/app/globals.css"; // Importez votre fichier CSS global
+import Footer from "@/components/footer"; // Importez votre Footer
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "H.garoum Portfolio",
-  description: "Created by H.garoum",
+  title: "Hicham Garoum - Portfolio",
+  description: "Découvrez le portfolio de Hicham Garoum, développeur web.",
 };
 
 export default function RootLayout({
@@ -23,11 +17,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+    <html lang="fr">
+      {/* Ajout de bg-gray-900 pour un fond unifié */}
+      <body className={`${inter.className} bg-gray-900 text-content`}>
+        <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
