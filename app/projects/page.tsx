@@ -1,4 +1,5 @@
 import React from 'react';
+import ProjectCard from '@/components/project-card'; // Importez le nouveau composant
 
 export default function ProjectsPage() {
   return (
@@ -11,20 +12,35 @@ export default function ProjectsPage() {
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {/* Ici, vous ajouterez vos composants de carte de projet */}
-          <div className="bg-white/5 p-6 rounded-lg shadow-lg border border-white/10">
-            <h3 className="text-xl font-semibold text-content mb-2">Nom du Projet 1</h3>
-            <p className="text-content/70">Description courte du projet 1. Technologies utilisées : React, Next.js, Tailwind CSS.</p>
-          </div>
-          {/* Répétez pour d'autres projets */}
-          <div className="bg-white/5 p-6 rounded-lg shadow-lg border border-white/10">
-            <h3 className="text-xl font-semibold text-content mb-2">Nom du Projet 1</h3>
-            <p className="text-content/70">Description courte du projet 1. Technologies utilisées : React, Next.js, Tailwind CSS.</p>
-          </div>
-          <div className="bg-white/5 p-6 rounded-lg shadow-lg border border-white/10">
-            <h3 className="text-xl font-semibold text-content mb-2">Nom du Projet 1</h3>
-            <p className="text-content/70">Description courte du projet 1. Technologies utilisées : React, Next.js, Tailwind CSS.</p>
-          </div>
+          {/* Remplacez les divs par le composant ProjectCard */}
+          <ProjectCard
+            title="Sacem Pesage App"
+            description="Une application web et mobile pour la gestion des pesages des conteneurs."
+            technologies="React, Vite,Javascript et Tailwind CSS"
+            imageUrl="/projects/sacem_pesage.jpg"
+            delay={0}
+          />
+          <ProjectCard
+            title="Draft Survey App"
+            description="Application Desktop pour le draft survey."
+            technologies="Python, Tkinter"
+            imageUrl="/projects/Draft_Survey_App.jpg"
+            delay={0.2} // Délai pour l'animation
+          />
+          <ProjectCard
+            title="Blog App"
+            description="Mon Blog personnel dans le cadre de ma formation en développement web."
+            technologies="React, Mdx"
+            imageUrl="/projects/hugoblog-picture.jpg"
+            delay={0.4} // Délai pour l'animation
+          />
+          <ProjectCard
+            title="Blog App"
+            description="Mon Blog personnel dans le cadre de ma formation en développement web."
+            technologies="Python , Django & sqlite3"
+            imageUrl="/projects/django_blog.jpg"
+            delay={0.4} // Délai pour l'animation
+          />
         </div>
       </section>
     </main>

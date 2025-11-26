@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Navbar from "@/components/navbar"; // Importez votre Navbar
-import "@/app/globals.css"; // Importez votre fichier CSS global
-import Footer from "@/components/footer"; // Importez votre Footer
+import "./globals.css"; // Importation relative directe
+import Footer from "@/components/footer";
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,7 +23,7 @@ export default function RootLayout({
       <body className={`${inter.className} bg-gray-900 text-content`}>
         <Navbar />
         {children}
-        <Footer />
+          <Footer />
       </body>
     </html>
   );
