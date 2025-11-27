@@ -45,7 +45,7 @@ export default function Hero() {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: 1.2 }}
                             className='text-content/80 text-xl mb-8'>
-                            Specializing in React, Node.js, and TypeScript. Building dynamic, scalable and responsive web applications with modern tech stacks.
+                            Specializing in Python React, Node.js, and TypeScript. Building dynamic, scalable and responsive web applications with modern tech stacks.
 
                         </motion.p>
                         <motion.button

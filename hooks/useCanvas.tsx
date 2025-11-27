@@ -16,11 +16,12 @@ export const useCanvas = (draw: DrawFunction) => {
         let animationFrameId: number;
 
         const resizeCanvas = () => {
-            canvas.width = window.innerWidth * devicePixelRatio;
-            canvas.height = window.innerHeight * devicePixelRatio;
+            const dpr = window.devicePixelRatio || 1;
+            canvas.width = window.innerWidth * dpr;
+            canvas.height = window.innerHeight * dpr;
             canvas.style.width = window.innerWidth + 'px';
             canvas.style.height = window.innerHeight + 'px';
-            ctx.scale(devicePixelRatio, devicePixelRatio);
+            ctx.scale(dpr, dpr);
         };
 
         const init = () => {
@@ -28,8 +29,10 @@ export const useCanvas = (draw: DrawFunction) => {
             window.addEventListener('resize', resizeCanvas);
 
             const render = () => {
+                // Efface le canvas avant de redessiner. C'est crucial pour l'animation.
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
                 draw(ctx);
-                animationFrameId = requestAnimationFrame(render);
+                animationFrameId = window.requestAnimationFrame(render);
             };
             render();
         };
@@ -38,7 +41,7 @@ export const useCanvas = (draw: DrawFunction) => {
 
         return () => {
             window.removeEventListener('resize', resizeCanvas);
-            cancelAnimationFrame(animationFrameId);
+            window.cancelAnimationFrame(animationFrameId);
         };
     }, [draw]);
 
