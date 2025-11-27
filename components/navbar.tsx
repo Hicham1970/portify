@@ -11,7 +11,7 @@ const navItems = [
     { name: "Projects", href: "/projects" },
     { name: "Skills", href: "/skills" },
     { name: "Experiences", href: "/experiences" },
-    { name: "Contact", href: "#contact" },
+    { name: "Contact", href: "/contact" },
 ];
 const socialLinks = {
     github: "https://github.com/Hicham1970",
