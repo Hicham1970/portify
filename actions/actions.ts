@@ -41,7 +41,7 @@ export async function sendEmail(prevState: FormState, formData: FormData) {
       from: 'Portfolio Contact <onboarding@resend.dev>', // Adresse d'envoi de Resend
       to: 'h.garoum@gmail.com', // Votre adresse email
       subject: `Nouveau message de ${name} via votre portfolio`,
-      reply_to: email,
+      replyTo: email,
       text: `De: ${name} <${email}>\n\nMessage:\n${message}`,
     });
     return { message: "Message envoyé avec succès !" };
