@@ -2,6 +2,7 @@
 
 import { motion, useScroll, useTransform } from 'framer-motion'
 import React from 'react'
+import Link from 'next/link'
 import Image from 'next/image'
 import { ParticleCanvas } from '@/hooks/particle';
 
@@ -48,21 +49,21 @@ export default function Hero() {
                             Specializing in Python React, Node.js, and TypeScript. Building dynamic, scalable and responsive web applications with modern tech stacks.
 
                         </motion.p>
-                        <motion.button
-
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.8, delay: 1.4 }}
-                            whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
-                            className=' relative overflow-hidden px-8 py-4 bg-surface  text-white  rounded-full border border-white/10 shadow-lg shadow-primary/5 hover:border-primary/30 transition-all group'
-                        >
-                            <span className='text-content group-hover:text-primary transition-colors '>
-                                Explore Work
-                            </span>
-                            <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-tertiary/10 opacity-0 group-hover:opacity-100 transition-opacity" />
-
-                        </motion.button>
-
+                        <Link href="/projects">
+                            <motion.button
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.8, delay: 1.4 }}
+                                whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
+                                className=' relative overflow-hidden px-8 py-4 bg-surface  text-white  rounded-full border border-white/10 shadow-lg shadow-primary/5 hover:border-primary/30 transition-all group'
+                            >
+                                <span className='text-content group-hover:text-primary transition-colors '>
+                                    Explore Work
+                                </span>
+                                <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-tertiary/10 opacity-0 group-hover:opacity-100 transition-opacity" />
+    
+                            </motion.button>
+                        </Link>
                     </motion.div>
                     {/* Image Card */}
                     <motion.div
@@ -134,5 +135,3 @@ export default function Hero() {
         </section>
     )
 }
-
-

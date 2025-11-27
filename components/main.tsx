@@ -28,14 +28,16 @@ const projects = [
         image: '/projects/analytics.jpg'
     },
     {
-        title: "Mobile Application",
-        description: "Cross-platform mobile app for health tracking",
+        title: "School Management",
+        description: "Cross-platform web app for school management",
         tech: [
-            { name: "React Native", icon: FaReact, color: "#61DAFB" },
-            { name: "Firebase", icon: SiFirebase, color: "#FFCA28" },
-            { name: "GraphQL", icon: SiGraphql, color: "#E535AB" }
+            { name: "Python", icon: FaReact, color: "#61DAFB" },
+            { name: "PostgreSQL", icon: SiFirebase, color: "#FFCA28" },
+            { name: "Psycopg2", icon: SiGraphql, color: "#E535AB" },
+            { name: "Pillow", icon: SiGraphql, color: "#E78AB" },
+
         ],
-        image: '/projects/mobile.jpg'
+        image: '/projects/school.jpg'
     },
 ]
 
@@ -82,7 +84,7 @@ export default function Main() {
                             >
                                 {/* Image Section */}
                                 <motion.div
-                                    className="h-[250px] relative"
+                                    className="h-[250px] w-[500px] relative"
                                     whileHover={{ scale: 1.05 }}
                                     transition={{ duration: 0.2 }}
                                 >
