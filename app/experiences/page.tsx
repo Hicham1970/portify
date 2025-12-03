@@ -49,7 +49,7 @@ export default function ExperiencesPage() {
               <h2 className="mb-2 text-2xl font-semibold text-content">26 Ans d&apos;Expertise en Draft Survey</h2>
               <p className="text-sm text-content/70">1998 - Présent</p>
               <p className="mt-4 text-content/80 leading-relaxed">
-                Fort d&apos;une carrière de plus d&apos;un quart de siècle, j&apos;ai développé une expertise pointue en tant que Marine Surveyor, menant des centaines d&apos;inspections avec une rigueur et une précision sans faille. Mais le faite d&apos;avoir des supérieurs qui ne croient pas en moi et à mes capacités, m&apos;a encouragé  à évoluer et m&apos;a poussé à me reconvertir dans le développement web vu le temps libre que j&apos;avais entre mes missions d&apos;inspections.
+                Fort d&apos;une carrière de plus d&apos;un quart de siècle, j&apos;ai développé une expertise pointue en tant que Marine Surveyor, menant des centaines d&apos;inspections avec une rigueur et une précision sans faille. Mais le faite d&apos;avoir du temps libre entre mes missions d&apos;inspections, m&apos;a encouragé  à évoluer et m&apos;a poussé à me reconvertir dans le développement web.
               </p>
             </motion.div>
           </div>
