@@ -7,7 +7,7 @@ export default function ProjectsPage() {
       <div className="w-full max-w-6xl">
         <h1 className="text-4xl md:text-5xl font-bold text-primary mb-2 text-center">Mes Projets </h1>
         <h3 className="text-lg text-content/80 m-2 text-center">
-          (Clik Me)
+          (Click Me)
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <ProjectCard
